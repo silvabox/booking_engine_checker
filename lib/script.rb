@@ -1,11 +1,12 @@
 require 'capybara/dsl'
 require 'capybara-webkit'
+require 'capybara/poltergeist'
 require 'dotenv'
 require 'orchestrate'
 
 Dotenv.load
 
-Capybara.default_driver = :webkit
+Capybara.default_driver = :poltergeist
 Capybara.default_max_wait_time = 20
 Capybara::Webkit.configure do |config|
   config.allow_url('intelligent-tickets.co.uk')
