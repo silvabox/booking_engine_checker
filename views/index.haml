@@ -1,0 +1,15 @@
+%script{src: 'Chart.bundle.js'}
+
+%canvas#uptime-chart(width="400" height="400")
+
+:javascript
+  var ctx = document.getElementById('uptime-chart');
+  var uptimeChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Saturday", "Friday", "Wednesday", "Tuesday", "Monday"],
+      datasets: [{
+        data: [22, 6, 1, 5, 1]
+      }]
+    }
+  });
