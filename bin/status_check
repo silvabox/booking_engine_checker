@@ -3,5 +3,4 @@
 source ~/.bash_profile
 
 cd /home/ubuntu/booking_engine_checker
-echo $PATH
-bundle exec ruby ./lib/script.rb
+bundle exec ruby ./script/checker.rb
