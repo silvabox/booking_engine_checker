@@ -1,0 +1,22 @@
+{
+  "name": "booking_engine_checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvabox/booking_engine_checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvabox/booking_engine_checker/issues"
+  },
+  "homepage": "https://github.com/silvabox/booking_engine_checker#readme",
+  "dependencies": {
+    "bower": "^1.7.9"
+  }
+}
