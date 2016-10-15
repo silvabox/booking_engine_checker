@@ -1,1 +1,7 @@
-bundle exec ruby /home/ubuntu/booking_engine_checker/lib/script.rb
+#!/bin/bash
+
+source ~/.bash_profile
+
+cd /home/ubuntu/booking_engine_checker
+echo $PATH
+bundle exec ruby ./lib/script.rb
