@@ -1,15 +1,34 @@
 %script{src: 'Chart.bundle.js'}
+%script{src: 'jquery.min.js'}
 
 %canvas#uptime-chart(width="400" height="400")
 
 :javascript
-  var ctx = document.getElementById('uptime-chart');
-  var uptimeChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ["Saturday", "Friday", "Wednesday", "Tuesday", "Monday"],
-      datasets: [{
-        data: [22, 6, 1, 5, 1]
-      }]
-    }
+  $.get('/api/last_seven_days', function(data) {
+   uptimeChart(JSON.parse(data));
   });
+
+  var ctx = document.getElementById('uptime-chart');
+
+  function uptimeChart(data) {
+    var uptimeChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: data.labels,
+        datasets: [{
+          label: 'Uptime percentage',
+          data: data.data
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            type: 'linear',
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
