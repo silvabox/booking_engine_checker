@@ -9,7 +9,6 @@ gem 'sinatra'
 gem 'haml'
 
 gem 'capybara'
-gem 'capybara-webkit'
 gem 'poltergeist'
 gem 'dotenv'
 gem 'orchestrate'

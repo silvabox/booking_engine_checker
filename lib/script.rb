@@ -1,5 +1,4 @@
 require 'capybara/dsl'
-require 'capybara-webkit'
 require 'capybara/poltergeist'
 require 'dotenv'
 require 'orchestrate'
@@ -7,11 +6,7 @@ require 'orchestrate'
 Dotenv.load
 
 Capybara.default_driver = :poltergeist
-Capybara.default_max_wait_time = 20
-Capybara::Webkit.configure do |config|
-  config.allow_url('intelligent-tickets.co.uk')
-  config.allow_url("www.paypal.com")
-end
+Capybara.default_max_wait_time = 30
 
 class Checker
   include Capybara::DSL
