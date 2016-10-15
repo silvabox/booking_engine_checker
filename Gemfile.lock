@@ -12,6 +12,7 @@ GEM
     capybara-webkit (1.11.1)
       capybara (>= 2.3.0, < 2.8.0)
       json
+    cliver (0.3.2)
     dotenv (2.1.1)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -27,9 +28,16 @@ GEM
     orchestrate (0.11.4)
       faraday (= 0.9.0)
       net-http-persistent (~> 2.9)
+    poltergeist (1.11.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
+    websocket-driver (0.6.4)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -41,9 +49,10 @@ DEPENDENCIES
   capybara-webkit
   dotenv
   orchestrate
+  poltergeist
 
 RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.5
+   1.13.3

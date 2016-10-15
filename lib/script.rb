@@ -19,8 +19,8 @@ class Checker
   def run
     visit 'http://intelligent-tickets.co.uk/index.php?th=tw&pg=login'
 
-    fill_in 'user', with: ENV['USER']
-    fill_in 'pass', with: ENV['PASSWORD']
+    fill_in 'user', with: ENV['IT_USER']
+    fill_in 'pass', with: ENV['IT_PASSWORD']
     check 'cookiecheck'
     click_button 'LOG IN'
 
