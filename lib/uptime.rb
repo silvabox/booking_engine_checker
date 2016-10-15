@@ -55,6 +55,10 @@ class Uptime
       new(map(events.after(Date.today.beginning_of_day)))
     end
 
+    def now
+      map([events.first]).first
+    end
+
     private
 
     def app

@@ -1,7 +1,9 @@
 %script{src: 'Chart.bundle.js'}
 %script{src: 'jquery.min.js'}
 
-%canvas#uptime-chart(width="400" height="400")
+%h1 Current Status: #{Uptime.now.status}
+
+%canvas#uptime-chart(width="400" height="200")
 
 :javascript
   $.get('/api/last_seven_days', function(data) {
